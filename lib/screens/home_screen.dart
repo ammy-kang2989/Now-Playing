@@ -21,8 +21,9 @@ class HomeScreen extends StatelessWidget {
             child: Container(
               padding: EdgeInsets.all(5),
               child: TextField(
-                // onChanged: (a) async {
-                // },
+                 onChanged: (a) async {
+                   bloc.fetchSearchMoview(a);
+                 },
                 autofocus: false,
                 decoration: InputDecoration(
                   suffixIcon: new Icon(Icons.search, color: Colors.white),
